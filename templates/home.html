@@ -1,0 +1,21 @@
+<input type="text" ng-model="tag" placeholder="search instagram">
+<button ng-click="getGrams()">Search</button>
+
+<input type="text" ng-model="newMap" placeholder="add a new map">
+<button ng-click="addMap()">Search</button>
+
+
+<div ng-repeat="map in maps">
+  <map center="{{map}}">
+    <marker
+        position="San Francisco"
+        title="Hello Marker"
+        animation="Animation.BOUNCE"
+        draggable="true"
+        visible="true"></marker>
+  </map>
+</div>
+
+<div ng-repeat="photo in photos">
+  <img ng-src="{{photo.images.standard_resolution.url}}" alt="">
+</div>
